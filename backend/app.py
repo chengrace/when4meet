@@ -15,3 +15,8 @@ def serve(path):
     return send_from_directory(app.static_folder,'index.html')
 
 api.add_resource(HelloApiHandler, '/flask/hello')
+
+@app.route("/add_one")
+def add_one():
+    db.calendars.insert_one({'title': "todo title", 'body': "todo body"})
+    return flask.jsonify(message="success")
