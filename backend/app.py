@@ -7,6 +7,8 @@ from flask_pymongo import PyMongo
 app = Flask(__name__, static_url_path='', static_folder='../frontend/public')
 CORS(app) #comment this on deployment
 api = Api(app)
+mongodb_client = PyMongo(app, uri="mongodb+srv://when4meet:when4meet@cluster0.qyubt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+db = mongodb_client.db
 
 @app.route("/", defaults={'path':''})
 def serve(path):
