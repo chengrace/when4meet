@@ -1,3 +1,5 @@
 Flask
 pymongo[srv]
 Flask-PyMongo
+flask_cors
+flask_restful
