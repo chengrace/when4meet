@@ -18,5 +18,5 @@ api.add_resource(HelloApiHandler, '/flask/hello')
 
 @app.route("/add_one")
 def add_one():
-    db.calendars.insert_one({'title': "todo title", 'body': "todo body"})
-    return flask.jsonify(message="success")
+    db.users.insert_one({'user': "gc650", 'pass': "password"})
+    return jsonify(message="success")
